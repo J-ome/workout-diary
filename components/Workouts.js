@@ -13,8 +13,6 @@ const Workouts = ( { workouts }) => {
     const { distanceUnit } = useDistanceContext();
 
     useEffect(() => {
-        
-        console.log('Received workouts:', workouts);
       }, [workouts]);
 
       const getIconName = (workout) => {
@@ -35,9 +33,6 @@ const Workouts = ( { workouts }) => {
         distance: '55',
         duration: '55'
       };
-    
-    console.log('Workouts component rendered???.');
-    console.log("workouts here??:", workouts)
 
     return (
         <View style={Style.container}>

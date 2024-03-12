@@ -14,11 +14,9 @@ import AddWorkout from "./components/AddWorkout";
 const Tab = createBottomTabNavigator();
 
 export default function App() {
-  console.log('App component rendering...');
 
   const [workouts, setWorkouts] = useState([]);
   useEffect(() => {
-    console.log('Workouts in App:', workouts);
   }, [workouts]);
 
   return (
