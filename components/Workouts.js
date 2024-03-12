@@ -44,7 +44,7 @@ const Workouts = ({ workouts }) => {
             <View style={Style.workouts}>
               <Text>Date: {item.date}</Text>
               <Text>Workout: {item.workout}</Text>
-              <Text>Distance: {distanceUnit === 'km' ? item.distance : (item.distance * 0.621371).toFixed(2)} {distanceUnit}</Text>
+              <Text>Distance: {distanceUnit === 'km' ? item.distance : (item.distance * 0.621371).toFixed(0)} {distanceUnit}</Text>
               <Text>Duration: {item.duration} min</Text>
             </View>
           </View>
