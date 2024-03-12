@@ -3,8 +3,8 @@ import { StyleSheet } from "react-native";
 
 export default Style = StyleSheet.create({
     container: {
-      flex: 1,
-      backgroundColor: '#c4ecf9',
+        flex: 1,
+        backgroundColor: '#c4ecf9',
     },
     flatList: {
         flexDirection: 'row',
@@ -16,7 +16,7 @@ export default Style = StyleSheet.create({
         backgroundColor: '#FFFFF0'
     },
     workouts: {
-        marginLeft: 10,   
+        marginLeft: 10,
     },
     addWorkoutTextInput: {
         margin: 10,
@@ -34,7 +34,7 @@ export default Style = StyleSheet.create({
         backgroundColor: '#FFFFF0',
         textAlign: 'center',
         alignSelf: 'stretch'
-        
+
 
     },
     addWorkoutButton: {
@@ -63,4 +63,4 @@ export default Style = StyleSheet.create({
         alignItems: 'center',
         marginBottom: 10,
     }
-  });
+});

@@ -11,7 +11,7 @@ const DistanceProvider = ({ children }) => {
         setDistanceUnit
     };
 
-    return(
+    return (
         <DistanceContext.Provider value={value} >
             {children}
         </DistanceContext.Provider>
@@ -19,4 +19,4 @@ const DistanceProvider = ({ children }) => {
 }
 
 
-export {DistanceContext, useDistanceContext, DistanceProvider};
+export { DistanceContext, useDistanceContext, DistanceProvider };

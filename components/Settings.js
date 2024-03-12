@@ -16,15 +16,15 @@ const Settings = () => {
       >
         <View style={Style.radioButtonRow}>
           <Text style={Style.chooseUnit}>Choose unit</Text>
-          <View style={Style.radioButtons}> 
-          <Text>km</Text>
-          <RadioButton value="km" />
+          <View style={Style.radioButtons}>
+            <Text>km</Text>
+            <RadioButton value="km" />
           </View>
         </View>
         <View style={Style.radioButtonRow}>
-        <View style={Style.radioButtons}>
-          <Text>miles</Text>
-          <RadioButton value="miles" />
+          <View style={Style.radioButtons}>
+            <Text>miles</Text>
+            <RadioButton value="miles" />
           </View>
         </View>
       </RadioButton.Group>

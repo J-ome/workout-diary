@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import {Calendar, LocaleConfig} from 'react-native-calendars';
+import { Calendar, LocaleConfig } from 'react-native-calendars';
 
 
 export default Calendar = () => {
@@ -8,15 +8,15 @@ export default Calendar = () => {
 
 
     return (
-        
-            <Calendar 
+
+        <Calendar
             onDayPress={day => {
                 setSelected(day.dateString)
             }}
             markedDates={{
-                [selected]: {selected: true, disableTouchEvent: true, selectedDotColor: 'orange'}
+                [selected]: { selected: true, disableTouchEvent: true, selectedDotColor: 'orange' }
             }}
-            />
-        
+        />
+
     )
 }

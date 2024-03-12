@@ -20,20 +20,20 @@ const AddWorkout = ({ workouts, setWorkouts }) => {
 
   const handleAddWorkout = () => {
     if (selectedWorkout && selectedDate && distance && duration) {
-      if(distance >= 0 && duration >= 0) {
-      const newWorkout = { 
-        workout: selectedWorkout,
-        date: selectedDate,
-        distance: distance,
-        duration: duration,
-        unit: distanceUnit
-      };
-      setWorkouts(prevWorkouts => [...prevWorkouts, newWorkout]);
+      if (distance >= 0 && duration >= 0) {
+        const newWorkout = {
+          workout: selectedWorkout,
+          date: selectedDate,
+          distance: distance,
+          duration: duration,
+          unit: distanceUnit
+        };
+        setWorkouts(prevWorkouts => [...prevWorkouts, newWorkout]);
       } else {
         Alert.alert(
           'Invalid input',
           'Distance and duration cannot be negative.',
-          [{text: 'OK'}]
+          [{ text: 'OK' }]
         );
       }
     }
@@ -41,25 +41,25 @@ const AddWorkout = ({ workouts, setWorkouts }) => {
 
   return (
     <SafeAreaView style={Style.container}>
-      <SegmentedButtons theme={{colors: {secondaryContainer: '#FFFFF0', outline: 'black' }, roundness: 1}}
-      style={Style.segmentedButton}
+      <SegmentedButtons theme={{ colors: { secondaryContainer: '#FFFFF0', outline: 'black' }, roundness: 1 }}
+        style={Style.segmentedButton}
         value={selectedWorkout}
         onValueChange={setSelectedWorkout}
         buttons={buttons}
       />
       <TextInput
-      style={Style.addWorkoutTextInput} 
-      label={`Distance (${distanceUnit === 'km' ? 'km' : 'miles'})`}
-      keyboardType='numeric'
-      value={distance}
-      onChangeText={setDistance}
+        style={Style.addWorkoutTextInput}
+        label={`Distance (${distanceUnit === 'km' ? 'km' : 'miles'})`}
+        keyboardType='numeric'
+        value={distance}
+        onChangeText={setDistance}
       />
       <TextInput
-      style={Style.addWorkoutTextInput} 
-      label="Duration (min)"
-      keyboardType='numeric'
-      value={duration}
-      onChangeText={setDuration}
+        style={Style.addWorkoutTextInput}
+        label="Duration (min)"
+        keyboardType='numeric'
+        value={duration}
+        onChangeText={setDuration}
       />
       <Modal visible={visible} transparent={true}>
         <Calendar
@@ -73,7 +73,7 @@ const AddWorkout = ({ workouts, setWorkouts }) => {
         </Pressable>
       </Modal>
       <Pressable onPress={() => setVisible(true)}
-      
+
       >
         <Text style={Style.calendarDate}>{selectedDate ? selectedDate : 'Select date'}</Text>
       </Pressable >
